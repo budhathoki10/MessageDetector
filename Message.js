@@ -5,7 +5,7 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const sendMessage = async (req, res) => {
   try {
     console.log("API key",process.env.API)
-    const ai = new GoogleGenerativeAI(process.env.API );
+    const ai = new GoogleGenerativeAI(process.env.GOOGLE_API);
     const message = req.body.message; 
     const prompt = `
       Here I am going to send you some message and based on that you have to tell me if I am sad, angry, etc. 
